@@ -1,0 +1,9 @@
+mkdir -p ExternalLibs/gTest
+cd ExternalLibs/gTest
+cmake /usr/src/gtest
+make
+
+add in tests cmake file:
+
+set(GTEST_ROOT ${CMAKE_SOURCE_DIR}/ExternalLibs/gTest)
+find_package(GTest REQUIRED)
